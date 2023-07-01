@@ -20,6 +20,7 @@ export default function Cart() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        mode: 'no-cors',
         order_data: data,
         email: userEmail,
         order_date: new Date().toDateString()
