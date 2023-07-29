@@ -13,14 +13,13 @@ export default function Home() {
 
   const loadData = async()=>{
     let response  = await fetch(`${BASE_URL}/api/foodData`,{
-        mode: 'no-cors',
         method:'POST',
         headers:{
           'Content-Type': 'application/json'
         }
     });
 
-    response = await response.json();
+    response = await response.json('');
     setFoodCat(response[1]);
     setFoodItem(response[0]);
   }

@@ -9,7 +9,6 @@ export default function Login() {
 const handleSubmit= async(e)=>{
     e.preventDefault();
     const response = await fetch(`${BASE_URL}/api/loginuser`,{
-      mode: 'no-cors',
         method:'POST',
         headers:{
             'Content-Type':'application/json'
